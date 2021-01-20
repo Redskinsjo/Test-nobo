@@ -1,0 +1,14 @@
+.container {
+    background-color: black;
+    height: 55px;
+    display: flex;
+    justify-content: flex-start;
+}
+.title {
+    font-size: 28px; 
+    color: white; 
+    font-family: "Roboto";
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

@@ -1,0 +1,16 @@
+.container {
+    font-family: "Roboto";
+    background-color: black;
+    color: white;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+a {
+    color: white
+}
+a:hover {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
