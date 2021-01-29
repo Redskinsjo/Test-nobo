@@ -1,16 +1,20 @@
-.container {
-    font-family: "Roboto";
-    background-color: black;
-    color: white;
-    height: 50px;
-    text-align: center;
-    vertical-align: middle;
+.footer-container {
+  font-family: "Roboto";
+  background-color: black;
+  color: white;
+  height: 50px;
+  /* text-align: center;
+  vertical-align: sub; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 a {
-    color: white
+  color: white;
 }
 a:hover {
-    color: blue;
-    text-decoration: underline;
-    cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
 }

@@ -1,0 +1,28 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-container {
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset-search {
+  font-family: "Roboto";
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.reset-search:hover {
+  background-color: red;
+}
