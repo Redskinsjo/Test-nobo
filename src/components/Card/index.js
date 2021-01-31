@@ -39,8 +39,6 @@ const useStyles = makeStyles({
 const Card = ({ movie, movies, setMovies, isLiked, setIsLiked }) => {
   const classes = useStyles()
 
-  console.log(movie)
-
   // Confirm delete of movie
   function showConfirm(id) {
     confirm({

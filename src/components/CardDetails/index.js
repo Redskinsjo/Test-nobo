@@ -17,13 +17,12 @@ const CardDetails = ({ pageContext: { movie } }) => {
   let desc
   if (film.summary) {
     const { summary } = film
-    desc = summary.replaceAll("<p>", "")
-    desc = desc.replaceAll("</p>", "")
-    desc = desc.replaceAll("<b>", "")
-    desc = desc.replaceAll("</b>", "")
-    desc = desc.replaceAll("<i>", "")
-    desc = desc.replaceAll("</i>", "")
-    desc = desc.replaceAll("<p>", "")
+    desc = summary.replace(/<p>/g, "")
+    desc = desc.replace(/<\/p>/g, "")
+    desc = desc.replace(/<b>/g, "")
+    desc = desc.replace(/<\/b>/g, "")
+    desc = desc.replace(/<i>/g, "")
+    desc = desc.replace(/<\/i>/g, "")
   }
 
   // formatting en lettres de la date de première diffusion
