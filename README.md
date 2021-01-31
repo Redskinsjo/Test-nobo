@@ -2,10 +2,10 @@
 https://nobo-jonathan.netlify.app/
 
 ## Librairies utilisées
--GatsbyJs
--Material UI
--Ant Design
--FontAwesome
+- GatsbyJs
+- Material UI
+- Ant Design
+- FontAwesome
 
 ## Pour démarrer
 Cloner le projet avec :
