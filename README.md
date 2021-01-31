@@ -1,25 +1,29 @@
 # Visiter le site en production
-https://particeep-jonathan.netlify.app/
+https://nobo-jonathan.netlify.app/
 
 ## Librairies utilisées
-Create-react-app
+GatsbyJs
+Material UI
 Ant Design
 FontAwesome
-Pour démarrer
+
+## Pour démarrer
 Cloner le projet avec :
-git clone https://github.com/Redskinsjo/Particeep jonathanCarnos
+git clone https://Redskinsjo@github.com/Redskinsjo/Test-nobo jonathanCarnos
 
 Naviguer vers le dossier :
 cd jonathanCarnos/
 
 Installer les dépendances avec :
-yarn install
+npm install
 
 Développer le projet en local avec :
-yarn start
+npm start
+ou
+npm run develop
 
-Fonctions
-Ajouter un film à ses favoris
-Supprimer un film de la liste
+## Fonctions
 Filtrer une liste de films
 Paginer la liste
+Supprimer un film de la liste
+Ajouter un film à ses favoris
