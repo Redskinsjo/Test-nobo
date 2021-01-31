@@ -2,6 +2,7 @@ import React from "react"
 import Header from "../shared/Header/index"
 import Layout from "../shared/Layout/index"
 import css from "./index.module.css"
+import css2 from "../Card/index.module.css"
 import NotFound from "../../assets/img/notfound.jpg"
 import Rating from "@material-ui/lab/Rating"
 import "@fontsource/roboto"
@@ -12,7 +13,7 @@ const CardDetails = ({ pageContext: { movie } }) => {
   // destructuring de l'objet movie
   const { show: film } = movie
 
-  // formatting de la clé summary
+  // formatting de la partie description
   let desc
   if (film.summary) {
     const { summary } = film
@@ -25,7 +26,7 @@ const CardDetails = ({ pageContext: { movie } }) => {
     desc = desc.replaceAll("<p>", "")
   }
 
-  // formatting de la clé premiered en lettres
+  // formatting en lettres de la date de première diffusion
   let monthLetter
   const year = film.premiered.split("-")[0]
   const monthNumber = film.premiered.split("-")[1]

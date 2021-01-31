@@ -1,14 +1,13 @@
 .container {
-    background-color: black;
-    height: 55px;
-    display: flex;
-    justify-content: flex-start;
+  background-color: black;
+  height: 55px;
+  display: flex;
 }
 .title {
-    font-size: 28px; 
-    color: white; 
-    font-family: "Roboto";
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  font-size: 28px;
+  color: white;
+  font-family: "Roboto";
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }

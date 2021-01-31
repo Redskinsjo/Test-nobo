@@ -1,0 +1,23 @@
+.like,
+.dislike {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+.like:hover {
+  color: blue;
+  cursor: pointer;
+}
+.dislike:hover {
+  color: rgb(201, 20, 20);
+  cursor: pointer;
+}
+.delete {
+  position: absolute;
+  top: 5px;
+  right: 9px;
+  font-size: 16px;
+}
+.delete:hover {
+  font-size: 17px;
+}
