@@ -9,18 +9,18 @@ https://nobo-jonathan.netlify.app/
 
 ## Pour démarrer
 Cloner le projet avec :
-git clone <span>https://Redskinsjo@github.com/Redskinsjo/Test-nobo</span> jonathanCarnos
+```js git clone https://Redskinsjo@github.com/Redskinsjo/Test-nobo jonathanCarnos```
 
 Naviguer vers le dossier :
-cd jonathanCarnos/
+```js cd jonathanCarnos/```
 
 Installer les dépendances avec :
-npm install
+```js npm install```
 
 Développer le projet en local avec :
-npm start
+```js npm start```
 ou
-npm run develop
+```js npm run develop```
 
 ## Fonctions
 - Filtrer une liste de films
