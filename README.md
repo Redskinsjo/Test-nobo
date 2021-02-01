@@ -9,7 +9,7 @@ https://nobo-jonathan.netlify.app/
 
 ## Pour démarrer
 Cloner le projet avec :
-git clone <div>https://Redskinsjo@github.com/Redskinsjo/Test-nobo</div> jonathanCarnos
+git clone <div style="display: inline">https://Redskinsjo@github.com/Redskinsjo/Test-nobo</div> jonathanCarnos
 
 Naviguer vers le dossier :
 cd jonathanCarnos/
