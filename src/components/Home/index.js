@@ -107,12 +107,15 @@ const Home = ({ pageContext: { fetchedMovies } }) => {
       }
     } else {
       if (searchedMovies) {
+        const filterMovies = searchedMovies.filter(movie => {
+          return movie.show.type.toLowerCase() === input.toLowerCase()
+        })
         if (page === 1) {
-          const displayedMovies = searchedMovies.slice(0, pageSize)
+          const displayedMovies = filterMovies.slice(0, pageSize)
           setDisplayedMovies(displayedMovies)
         } else {
           const skip = (page - 1) * pageSize
-          const displayedMovies = searchedMovies.slice(skip, skip + pageSize)
+          const displayedMovies = filterMovies.slice(skip, skip + pageSize)
           setDisplayedMovies(displayedMovies)
         }
       } else {
@@ -132,28 +135,56 @@ const Home = ({ pageContext: { fetchedMovies } }) => {
   const handleFilterChange = value => {
     if (value === "all categories") {
       setFilteredMovies(movies)
-      if (currentPage === 1) {
-        const displayedMovies = movies.slice(0, pageSize)
-        setDisplayedMovies(displayedMovies)
+      if (searchedMovies) {
+        if (currentPage === 1) {
+          const displayedMovies = searchedMovies.slice(0, pageSize)
+          setDisplayedMovies(displayedMovies)
+        } else {
+          const skip = (currentPage - 1) * pageSize
+          const displayedMovies = searchedMovies.slice(skip, skip + pageSize)
+          setDisplayedMovies(displayedMovies)
+        }
       } else {
-        const skip = (currentPage - 1) * pageSize
-        const displayedMovies = movies.slice(skip, skip + pageSize)
-        setDisplayedMovies(displayedMovies)
+        if (currentPage === 1) {
+          const displayedMovies = movies.slice(0, pageSize)
+          setDisplayedMovies(displayedMovies)
+        } else {
+          const skip = (currentPage - 1) * pageSize
+          const displayedMovies = movies.slice(skip, skip + pageSize)
+          setDisplayedMovies(displayedMovies)
+        }
       }
     } else {
-      const filterMovies = movies.filter(movie => {
-        return movie.show.type.toLowerCase() === value.toLowerCase()
-      })
-      setFilteredMovies(filterMovies)
-      if (currentPage === 1) {
-        const displayedMovies = filterMovies.slice(0, pageSize)
+      if (searchedMovies) {
+        const filterMovies = searchedMovies.filter(movie => {
+          return movie.show.type.toLowerCase() === value.toLowerCase()
+        })
+        setFilteredMovies(filterMovies)
+        if (currentPage === 1) {
+          const displayedMovies = filterMovies.slice(0, pageSize)
 
-        setDisplayedMovies(displayedMovies)
+          setDisplayedMovies(displayedMovies)
+        } else {
+          const skip = (currentPage - 1) * pageSize
+          const displayedMovies = filterMovies.slice(skip, skip + pageSize)
+
+          setDisplayedMovies(displayedMovies)
+        }
       } else {
-        const skip = (currentPage - 1) * pageSize
-        const displayedMovies = filterMovies.slice(skip, skip + pageSize)
+        const filterMovies = movies.filter(movie => {
+          return movie.show.type.toLowerCase() === value.toLowerCase()
+        })
+        setFilteredMovies(filterMovies)
+        if (currentPage === 1) {
+          const displayedMovies = filterMovies.slice(0, pageSize)
 
-        setDisplayedMovies(displayedMovies)
+          setDisplayedMovies(displayedMovies)
+        } else {
+          const skip = (currentPage - 1) * pageSize
+          const displayedMovies = filterMovies.slice(skip, skip + pageSize)
+
+          setDisplayedMovies(displayedMovies)
+        }
       }
     }
   }
