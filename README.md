@@ -23,7 +23,7 @@ ou
 npm run develop
 
 ## Fonctions
-Filtrer une liste de films
-Paginer la liste
-Supprimer un film de la liste
-Ajouter un film à ses favoris
+- Filtrer une liste de films
+- Paginer la liste
+- Supprimer un film de la liste
+- Ajouter un film à ses favoris
