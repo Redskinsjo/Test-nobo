@@ -11,7 +11,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
           ...movie.show,
           image: {
             ...movie.show.image,
-            medium: movie.show.image.medium
+            medium: movie.show.image?.medium
               ? movie.show.image.medium.replace(/^https?:/, "")
               : null,
           },
