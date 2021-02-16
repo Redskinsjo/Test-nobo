@@ -1,13 +1,16 @@
 # Visiter le site en production
+
 https://nobo-jonathan.netlify.app/
 
 ## Librairies utilisées
+
 - GatsbyJs
 - Material UI
 - Ant Design
 - FontAwesome
 
 ## Pour démarrer
+
 Cloner le projet avec :
 git clone https://Redskinsjo@github.com/Redskinsjo/Test-nobo jonathanCarnos
 
@@ -23,6 +26,7 @@ ou
 npm run develop
 
 ## Fonctions
+
 - Filtrer une liste de films
 - Paginer la liste
 - Supprimer un film de la liste
