@@ -79,7 +79,7 @@ const Home = ({ pageContext: { fetchedMovies } }) => {
         setMovies={setMovies}
         isLiked={isLiked}
         setIsLiked={setIsLiked}
-      ></Card>
+      />
     )
   })
 
@@ -324,7 +324,7 @@ const Home = ({ pageContext: { fetchedMovies } }) => {
                 setPageSize(pageSize)
                 handlePageChange(page, pageSize)
               }}
-            ></Pagination>
+            />
           </div>
         </Layout>
       </div>
