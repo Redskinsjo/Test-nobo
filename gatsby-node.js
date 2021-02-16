@@ -1,17 +1,28 @@
 const axios = require("axios")
 
 exports.createPages = async ({ actions: { createPage } }) => {
-  const { data: fetchedMovies } = await axios.get(
-    "https://api.tvmaze.com/search/shows?q=test"
-  )
+  const { data } = await axios.get("https://api.tvmaze.com/search/shows?q=test")
 
-  // Crétion de la page d'accueil
-  createPage({
-    path: "/",
-    component: require.resolve("./src/components/Home/index"),
-    context: { fetchedMovies },
-  })
-
+  const fetchedMovies = data
+    .map(movie => {
+      return {
+        ...movie,
+        show: {
+          ...movie.show,
+          image: {
+            ...movie.show.image,
+            medium: movie.show.image.medium.replace(/^https?:/, ""),
+          },
+        },
+      }
+    })
+    // Crétion de la page d'accueil
+    .createPage({
+      path: "/",
+      component: require.resolve("./src/components/Home/index"),
+      context: { fetchedMovies },
+    })
+  console.log(fetchedMovies)
   // Création des pages 'détail' de chaque film
   fetchedMovies.forEach(movie => {
     createPage({
